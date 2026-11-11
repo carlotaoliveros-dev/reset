@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RESET · Talleres de skincare en Málaga</title>
+<meta name="description" content="Tardes de chicas en Málaga donde aprendes a cuidar tu piel, pruebas productos de marcas emergentes según tu tipo de piel y lo vives como un plan con amigas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Serif+Display:ital@0;1&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#ead9a9;
+    --cream-2:#f4e8c6;
+    --wine:#6e0a12;
+    --wine-2:#5a070e;
+    --green:#bcd99a;
+    --line:#b99a6a;
+    --display:'Bagel Fat One', 'DM Serif Display', serif;
+    --serif:'DM Serif Display', Georgia, serif;
+    --body:'Lora', Georgia, serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--wine);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+  .nav .logo{font-family:var(--display);font-size:22px;text-decoration:none;letter-spacing:.5px}
+  .nav .pills{display:flex;gap:8px}
+  .pill{border:1.5px solid var(--wine);border-radius:999px;padding:4px 12px;font-size:12px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+  a.pill:hover{background:var(--wine);color:var(--cream)}
+
+  /* HERO */
+  .hero{text-align:center;padding:24px 0 56px;border-bottom:1.5px solid var(--line)}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(84px,22vw,250px);line-height:.9;letter-spacing:-2px;margin-top:10px}
+  .hero .kicker{letter-spacing:.45em;font-size:14px;font-weight:700;margin:30px 0 26px;text-transform:uppercase}
+  .hero p.lead{max-width:540px;margin:0 auto;font-size:16px}
+  .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:20px 0 34px}
+  .tags .pill{font-size:12px;padding:5px 14px}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto}
+  .choice{display:block;text-align:left;text-decoration:none;border-radius:14px;padding:18px 20px;min-height:120px;transition:transform .2s}
+  .choice:hover{transform:translateY(-3px)}
+  .choice strong{font-family:var(--serif);font-weight:400;font-size:21px;display:block}
+  .choice small{font-size:12px;display:block;margin-top:2px}
+  .choice .arrow{font-size:24px;display:block;margin-top:6px}
+  .choice.green{background:var(--green)}
+  .choice.wine{background:var(--wine);color:var(--cream)}
+
+  /* SECTIONS */
+  section.block{padding:64px 0;border-bottom:1.5px solid var(--line)}
+  .eyebrow{font-size:10px;letter-spacing:.35em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+  .intro{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-bottom:36px}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.6vw,46px);line-height:1.08}
+  h2 em{font-style:italic}
+  h3{font-family:var(--serif);font-weight:400;font-size:28px;margin:52px 0 16px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border-radius:14px;padding:20px 20px 24px;min-height:180px}
+  .card.wine{background:var(--wine);color:var(--cream)}
+  .card.green{background:var(--green);color:var(--wine)}
+  .card .num{font-family:var(--display);font-size:42px;line-height:1;color:var(--green)}
+  .card.green .num{color:var(--wine)}
+  .card h4{font-family:var(--serif);font-weight:400;font-size:19px;margin:14px 0 6px}
+  .card p{font-size:13px}
+
+  .list{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+  .list li{list-style:none;border-top:1.5px solid var(--line);padding:16px 0 16px 26px;position:relative;font-size:14px}
+  .list li::before{content:"✦";position:absolute;left:4px;top:16px;font-size:12px}
+  .list li b{font-weight:700}
+  .badge{display:inline-block;border:1.5px solid var(--wine);border-radius:999px;font-size:9px;letter-spacing:.2em;padding:1px 8px;vertical-align:middle;font-weight:700}
+
+  /* FORMS */
+  .formbox{border-radius:18px;padding:44px;display:grid;grid-template-columns:1fr 1.15fr;gap:40px;margin-top:64px}
+  .formbox.wine{background:var(--wine);color:var(--cream)}
+  .formbox.green{background:var(--green);color:var(--wine)}
+  .formbox h2{font-size:clamp(30px,3.6vw,38px);margin-bottom:18px}
+  .formbox .note{font-size:11px;opacity:.8;margin-top:14px}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  form label.f{display:block;font-size:12px;margin-bottom:12px}
+  form label.f span{display:block;margin-bottom:5px}
+  input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{
+    width:100%;font:inherit;font-size:14px;color:var(--wine);background:var(--cream-2);border:none;border-radius:10px;padding:10px 12px;outline:2px solid transparent;transition:outline-color .2s}
+  input:focus,select:focus,textarea:focus{outline-color:var(--wine)}
+  .formbox.wine input:focus,.formbox.wine select:focus{outline-color:var(--green)}
+  textarea{min-height:90px;resize:vertical}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236e0a12' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+  .consent{display:flex;gap:8px;align-items:flex-start;font-size:11px;margin:8px 0 18px}
+  .consent input{margin-top:2px;accent-color:var(--wine)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .chips label{cursor:pointer}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips span{display:inline-block;border:1.5px solid var(--wine);border-radius:999px;padding:5px 12px;font-size:12px;transition:background .2s,color .2s}
+  .chips input:checked + span{background:var(--wine);color:var(--cream)}
+  .chips input:focus-visible + span{outline:2px solid var(--wine);outline-offset:2px}
+  .btn{font-family:var(--serif);font-size:16px;border:none;border-radius:999px;padding:11px 24px;cursor:pointer;transition:transform .15s,opacity .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:disabled{opacity:.6;cursor:wait}
+  .btn.green{background:var(--green);color:var(--wine)}
+  .btn.wine{background:var(--wine);color:var(--cream)}
+  .status{font-size:13px;margin-top:12px;min-height:1em}
+  .hp{display:none}
+
+  /* FOOTER */
+  footer{text-align:center;padding:60px 0 40px}
+  footer .logo{font-family:var(--display);font-size:clamp(56px,10vw,86px);line-height:1}
+  footer .social{display:flex;justify-content:center;gap:10px;margin:24px 0 18px;flex-wrap:wrap}
+  footer .social .pill{font-size:13px;padding:6px 16px}
+  footer small{font-size:11px;display:block}
+  footer .legal{margin-top:4px;display:flex;justify-content:center;gap:14px;font-size:11px}
+
+  @media (max-width:760px){
+    .intro,.formbox{grid-template-columns:1fr;gap:20px}
+    .cards{grid-template-columns:1fr}
+    .list{grid-template-columns:1fr}
+    .formbox{padding:28px 20px}
+    .choices{grid-template-columns:1fr}
+    .nav .pills .pill{font-size:11px;padding:4px 10px}
+    form .row{grid-template-columns:1fr;gap:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="#top">RESET</a>
+    <div class="pills">
+      <a class="pill" href="#clientas">Soy clienta</a>
+      <a class="pill" href="#marcas">Soy marca</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <h1>RESET</h1>
+    <p class="kicker">Talleres de skincare</p>
+    <p class="lead">Tardes de chicas en Málaga donde aprendes a cuidar tu piel, pruebas productos de marcas emergentes según tu tipo de piel y lo vives como un plan con amigas, no como una clase.</p>
+    <div class="tags">
+      <span class="pill">10-15 chicas</span>
+      <span class="pill">18-25 años</span>
+      <span class="pill">1 marca por evento</span>
+      <span class="pill">Málaga</span>
+    </div>
+    <div class="choices">
+      <a class="choice green" href="#clientas"><strong>Soy clienta</strong><small>Quiero ir al primer RESET</small><span class="arrow">↓</span></a>
+      <a class="choice wine" href="#marcas"><strong>Soy una marca emergente</strong><small>Quiero colaborar con RESET</small><span class="arrow">↓</span></a>
+    </div>
+  </header>
+
+  <!-- CLIENTAS -->
+  <section class="block" id="clientas">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Para ti</p>
+        <h2>Una tarde para <em>resetear</em> tu piel (y tu semana).</h2>
+      </div>
+      <p>Vienes con tus amigas, descubres qué tipo de piel tienes y qué le sienta bien, y te vas a casa con una rutina clara. Sin pagar una consulta y sin gastar en productos que no te sirven.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card wine"><div class="num">01</div><h4>Conoce tu piel</h4><p>Una experta de la marca te explica los tipos de piel y te ayuda a saber cuál es la tuya.</p></div>
+      <div class="card green"><div class="num">02</div><h4>Pruébalo en tu piel</h4><p>Te haces la mascarilla y pruebas los productos que van con tu tipo de piel, con ayuda y en directo.</p></div>
+      <div class="card wine"><div class="num">03</div><h4>Plan de chicas</h4><p>Peli, picoteo y charla. Un plan distinto al de siempre, ya montado: solo tienes que venir.</p></div>
+    </div>
+
+    <h3>Qué te llevas</h3>
+    <ul class="list">
+      <li>Sales sabiendo tu tipo de piel y qué usar.</li>
+      <li>Una rutina clara y hecha para ti.</li>
+      <li>Pruebas antes de comprar: no gastas en lo que no te sirve.</li>
+      <li>Descubres marcas nuevas antes que nadie.</li>
+      <li>Grupo pequeño y cercano, sin presión para comprar.</li>
+      <li>Una tarde con tus amigas que no es la de siempre.</li>
+    </ul>
+
+    <div class="formbox wine">
+      <div>
+        <p class="eyebrow">Lista de espera</p>
+        <h2>Entérate del primer RESET.</h2>
+        <p>Déjanos tu email y te escribimos en cuanto tengamos fecha, sitio y marca. Las plazas son pocas (10-15 chicas), así que quien está en la lista se entera primero.</p>
+        <p class="note">Solo te escribiremos para avisarte de los eventos de RESET. Puedes darte de baja cuando quieras.</p>
+      </div>
+      <form class="js-form" data-subject="Nueva clienta en la lista de espera de RESET">
+        <label class="f"><span>Email *</span><input type="email" name="email" placeholder="tu@email.com" required></label>
+        <div class="row">
+          <label class="f"><span>Nombre</span><input type="text" name="nombre"></label>
+          <label class="f"><span>Instagram</span><input type="text" name="instagram" placeholder="@"></label>
+        </div>
+        <div class="row">
+          <label class="f"><span>Edad</span>
+            <select name="edad"><option value="">Elige</option><option>Menos de 18</option><option>18-20</option><option>21-23</option><option>24-25</option><option>Más de 25</option></select>
+          </label>
+          <label class="f"><span>Tu tipo de piel</span>
+            <select name="tipo_de_piel"><option value="">Elige</option><option>Seca</option><option>Grasa</option><option>Mixta</option><option>Normal</option><option>Sensible</option><option>No lo sé</option></select>
+          </label>
+        </div>
+        <label class="f"><span>¿Vendrías con amigas?</span>
+          <select name="con_amigas"><option value="">Elige</option><option>Sí, con amigas</option><option>Sí, con una amiga</option><option>Iría sola</option><option>Aún no lo sé</option></select>
+        </label>
+        <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada" required><span>He leído la <a href="#">política de privacidad</a> y acepto que me escribáis por email para avisarme de los eventos de RESET. *</span></label>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <button class="btn green" type="submit">Apuntarme</button>
+        <p class="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="block" id="marcas">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Para marcas emergentes</p>
+        <h2>Tu próxima clienta no quiere otro anuncio. <em>Quiere probarlo.</em></h2>
+      </div>
+      <p>Conectamos marcas emergentes de skincare con su clienta ideal: grupos de 10 a 15 chicas de 18 a 25 años que descubren su tipo de piel y prueban tus productos en vivo. En cada evento hay una sola marca: sin competencia en la mesa, sin ruido.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card wine"><div class="num">01</div><h4>Tu marca habla</h4><p>Una persona de tu equipo presenta la filosofía, los productos y explica los tipos de piel.</p></div>
+      <div class="card green"><div class="num">02</div><h4>Prueban en su piel</h4><p>Cada chica prueba mascarillas y productos según su tipo de piel, con ayuda y en directo.</p></div>
+      <div class="card wine"><div class="num">03</div><h4>Stand de venta</h4><p>Vendes directamente durante todo el evento, justo cuando las ganas de comprar están más altas.</p></div>
+    </div>
+
+    <h3>Qué se lleva tu marca</h3>
+    <ul class="list">
+      <li><b>Venta directa</b> a chicas que acaban de probar el producto en su piel.</li>
+      <li><b>Contenido para tus redes</b>: fotos y vídeos reales del evento con tu producto en uso.</li>
+      <li><b>Clientas nuevas</b> que te descubren probándote, no por un anuncio.</li>
+      <li><b>Opiniones de primera mano</b> de tu público objetivo, en directo y sin filtros.</li>
+    </ul>
+
+    <h3>Cómo colaborar</h3>
+    <ul class="list">
+      <li><b>Producto</b>: aportas el producto para las pruebas y, si quieres, algún detalle para las asistentes.</li>
+      <li><b>Presencia de marca</b>: una persona de tu equipo presenta la marca y asesora a las chicas.</li>
+      <li><b>Patrocinio del evento</b> <span class="badge">OPCIONAL</span>: si lo deseas, tu marca puede financiar el evento.</li>
+    </ul>
+
+    <div class="formbox green">
+      <div>
+        <p class="eyebrow">Hablemos</p>
+        <h2>¿Tu marca encaja en RESET?</h2>
+        <p>Cuéntanos un poco sobre tu marca y te escribimos para agendar una llamada corta.</p>
+        <p class="note">Respondemos en un plazo de 2 a 3 días laborables.</p>
+      </div>
+      <form class="js-form" data-subject="Nueva marca interesada en colaborar con RESET">
+        <div class="row">
+          <label class="f"><span>Marca *</span><input type="text" name="marca" required></label>
+          <label class="f"><span>Persona de contacto *</span><input type="text" name="persona_de_contacto" required></label>
+        </div>
+        <div class="row">
+          <label class="f"><span>Email *</span><input type="email" name="email" required></label>
+          <label class="f"><span>Teléfono</span><input type="tel" name="telefono"></label>
+        </div>
+        <label class="f"><span>Web o Instagram de la marca</span><input type="text" name="web_o_instagram" placeholder="@ o https://"></label>
+        <label class="f" style="margin-bottom:6px"><span>¿Cómo te gustaría colaborar? (puedes marcar varias)</span></label>
+        <div class="chips">
+          <label><input type="checkbox" name="colaboracion" value="Producto"><span>Producto</span></label>
+          <label><input type="checkbox" name="colaboracion" value="Presencia de marca"><span>Presencia de marca</span></label>
+          <label><input type="checkbox" name="colaboracion" value="Patrocinio del evento"><span>Patrocinio del evento</span></label>
+          <label><input type="checkbox" name="colaboracion" value="Aún no lo sé"><span>Aún no lo sé</span></label>
+        </div>
+        <label class="f"><span>Cuéntanos algo más</span><textarea name="mensaje" placeholder="Qué productos tenéis, desde dónde trabajáis, dudas..."></textarea></label>
+        <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada" required><span>He leído la <a href="#">política de privacidad</a> y acepto que me contactéis sobre esta colaboración. *</span></label>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+        <button class="btn wine" type="submit">Quiero colaborar</button>
+        <p class="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">RESET</div>
+    <div class="social">
+      <a class="pill" href="https://www.instagram.com/the.resett_/" target="_blank" rel="noopener">Instagram @the.resett_</a>
+      <a class="pill" href="https://www.tiktok.com/@the.resett" target="_blank" rel="noopener">TikTok @the.resett</a>
+    </div>
+    <small>RESET es un proyecto de la Asociación Junior Empresa VYSEON · Málaga</small>
+    <div class="legal"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a></div>
+  </footer>
+</div>
+
+<script>
+  // Envío de formularios a resett.info@gmail.com mediante FormSubmit (sin servidor propio)
+  const ENDPOINT = 'https://formsubmit.co/ajax/resett.info@gmail.com';
+
+  document.querySelectorAll('.js-form').forEach(form => {
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const status = form.querySelector('.status');
+      const btn = form.querySelector('button[type=submit]');
+      const fd = new FormData(form);
+      if (fd.get('_honey')) return; // bot
+
+      const data = {};
+      for (const [k, v] of fd.entries()) {
+        if (k === '_honey') continue;
+        data[k] = data[k] ? data[k] + ', ' + v : v;
+      }
+      data._subject = form.dataset.subject;
+      data._template = 'table';
+      if (data.email) data._replyto = data.email;
+
+      btn.disabled = true;
+      status.textContent = 'Enviando…';
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || out.success === 'false' || out.success === false) throw new Error(out.message || 'Error');
+        form.reset();
+        status.textContent = '¡Gracias! Lo hemos recibido. Te escribiremos pronto ✦';
+      } catch (err) {
+        status.textContent = 'Vaya, no se ha podido enviar. Inténtalo de nuevo o escríbenos a resett.info@gmail.com';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
+</body>
+</html>
