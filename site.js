@@ -87,6 +87,9 @@
   function show(step) {
     const wrap = step.closest('[data-steps]');
     wrap.querySelectorAll('.step').forEach(s => { s.hidden = s !== step; s.classList.remove('is-in'); });
+    // Si el paso nuevo queda fuera de la pantalla (p. ej. es más corto que el anterior), lo traemos a la vista
+    const top = step.getBoundingClientRect().top;
+    if (top < 84 || top > window.innerHeight - 160) window.scrollBy({ top: top - 88, behavior: reduce ? 'instant' : 'smooth' });
     if (!reduce) step.classList.add('is-in');
     const focusTarget = step.querySelector('[data-focus]') || step.querySelector('h2, h3, .done-title');
     if (focusTarget) { focusTarget.setAttribute('tabindex', '-1'); focusTarget.focus({ preventScroll: true }); }
