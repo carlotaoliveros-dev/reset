@@ -12,7 +12,6 @@
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Enlaces antiguos a /#marcas llevan a la página de marcas
   if (location.hash === '#marcas' && document.body.dataset.page === 'clientas') {
     location.replace('marcas.html');
   }
