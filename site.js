@@ -22,7 +22,7 @@
     if (!field) return;
     let err = field.querySelector('.err');
     if (!err) {
-      err = document.createElement('p');
+      err = document.createElement(field.tagName === 'LABEL' ? 'span' : 'p');
       err.className = 'err';
       err.id = (input.id || input.name) + '-err';
       field.appendChild(err);

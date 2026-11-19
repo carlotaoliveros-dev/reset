@@ -110,9 +110,11 @@ em{font-style:italic}
 .err{display:none;font-size:14px;margin-top:6px;padding-left:2px}
 .has-error .err{display:block}
 .has-error input,.has-error select,.has-error textarea{border-width:2.5px}
-.consent{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.45;margin:14px 0 6px;cursor:pointer}
+.consent{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.45;margin:14px 0 6px;cursor:pointer}
 .consent input{flex:none;width:22px;height:22px;margin-top:1px;accent-color:var(--cherry);cursor:pointer}
 .consent a{text-decoration:underline}
+.consent span{flex:1 1 0;min-width:0}
+.consent .err{flex:0 0 100%;margin:-6px 0 0 34px}
 .micro{font-size:14px;margin-top:10px;opacity:.92}
 .rgpd{font-size:13px;line-height:1.5;margin-top:14px;max-width:60ch}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
