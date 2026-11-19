@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RESET · Talleres de skincare en Málaga para chicas de 18 a 25</title>
-<meta name="description" content="Tardes de skincare en Málaga para grupos pequeños: descubres tu tipo de piel, pruebas productos de una marca emergente y te vas con una rutina clara. Apúntate a la lista.">
+<meta name="description" content="Una tarde con tus amigas para descubrir tu tipo de piel y probar productos de una marca emergente. Grupos de 10 a 15 chicas en Málaga. Apúntate a la lista.">
 <link rel="canonical" href="https://carlotaoliveros-dev.github.io/reset/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#BAD797">
@@ -12,426 +12,215 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="RESET">
 <meta property="og:title" content="RESET · Talleres de skincare en Málaga">
-<meta property="og:description" content="Una tarde con tus amigas para conocer tu piel y probar productos de una marca emergente. Grupos de 10 a 15 chicas.">
+<meta property="og:description" content="Descubre tu tipo de piel en una tarde con tus amigas. Grupos de 10 a 15 chicas.">
 <meta property="og:url" content="https://carlotaoliveros-dev.github.io/reset/">
 <meta property="og:image" content="https://carlotaoliveros-dev.github.io/reset/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fuentes/modak.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"RESET","url":"https://carlotaoliveros-dev.github.io/reset/","logo":"https://carlotaoliveros-dev.github.io/reset/og.png","areaServed":"Málaga","sameAs":["https://www.instagram.com/the.resett_/","https://www.tiktok.com/@the.resett"]}
 </script>
-<style>
-  /* Fuentes de marca servidas desde la propia web (sin Google Fonts: nada de IPs a terceros) */
-  @font-face{font-family:'Modak';src:url(fuentes/modak.woff2) format('woff2');font-display:block}
-  @font-face{font-family:'DM Serif Display';src:url(fuentes/dmserif.woff2) format('woff2');font-display:swap}
-  @font-face{font-family:'DM Serif Display';font-style:italic;src:url(fuentes/dmserif-italic.woff2) format('woff2');font-display:swap}
-  @font-face{font-family:'Belgrano';src:url(fuentes/belgrano.woff2) format('woff2');font-display:swap}
-
-  :root{
-    /* Paleta oficial de marca (antes había tonos "casi iguales": #6e0a12, #bcd99a, #ead9a9) */
-    --cherry:#74070E;
-    --green:#BAD797;
-    --cream:#E4D7A5;
-    --cream-2:#F3ECD2;
-    --line:#b99a6a;
-    --display:'Modak', 'DM Serif Display', serif;
-    --serif:'DM Serif Display', Georgia, serif;
-    --body:'Belgrano', Georgia, serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--cream);color:var(--cherry);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit}
-  :focus-visible{outline:3px solid var(--cherry);outline-offset:3px}
-  .wine :focus-visible,.formbox.wine :focus-visible{outline-color:var(--green)}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-  /* NAV */
-  .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-  .nav .logo{font-family:var(--display);font-size:34px;line-height:1;text-decoration:none;padding-top:4px}
-  .nav .pills{display:flex;gap:8px}
-  .pill{display:inline-flex;align-items:center;min-height:44px;border:1.5px solid var(--cherry);border-radius:999px;padding:0 16px;font-size:14px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
-  a.pill:hover{background:var(--cherry);color:var(--cream)}
-
-  /* HERO: wordmark cherry sobre verde, igual que el logo de redes */
-  .hero-band{background:var(--green)}
-  .hero{text-align:center;padding:8px 0 56px}
-  .hero h1{font-weight:400}
-  .hero .word{display:block;font-family:var(--display);font-size:clamp(96px,26vw,280px);line-height:.95;letter-spacing:.01em;margin-top:16px}
-  .hero .kicker{display:block;font-family:var(--body);letter-spacing:.35em;font-size:clamp(13px,1.6vw,16px);font-weight:400;margin:18px 0 24px;text-transform:uppercase}
-  .hero p.lead{max-width:560px;margin:0 auto;font-size:18px}
-  .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 32px;list-style:none}
-  .tags li{border:1.5px solid var(--cherry);border-radius:999px;font-size:14px;padding:5px 14px}
-  .choices{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:620px;margin:0 auto}
-  .choice{display:flex;flex-direction:column;text-align:left;text-decoration:none;border-radius:16px;padding:20px 22px;min-height:120px;transition:transform .2s}
-  .choice:hover{transform:translateY(-3px)}
-  .choice strong{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15}
-  .choice small{font-size:15px;margin-top:4px}
-  .choice .arrow{font-size:24px;margin-top:auto;padding-top:6px}
-  .choice.cream{background:var(--cream-2)}
-  .choice.wine{background:var(--cherry);color:var(--cream)}
-
-  /* SECTIONS */
-  section.block{padding:64px 0;border-bottom:1.5px solid var(--line)}
-  .eyebrow{font-size:13px;letter-spacing:.25em;text-transform:uppercase;margin-bottom:8px}
-  .intro{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-bottom:36px}
-  h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.6vw,48px);line-height:1.08}
-  h2 em{font-style:italic}
-  h3{font-family:var(--serif);font-weight:400;font-size:28px;margin:52px 0 16px}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none}
-  .card{border-radius:16px;padding:22px 22px 26px;min-height:180px}
-  .card.wine{background:var(--cherry);color:var(--cream)}
-  .card.green{background:var(--green);color:var(--cherry)}
-  .card.cream{background:var(--cream-2);color:var(--cherry)}
-  .card .num{font-family:var(--serif);font-size:44px;line-height:1;color:var(--green)}
-  .card.green .num,.card.cream .num{color:var(--cherry)}
-  .card h4{font-family:var(--serif);font-weight:400;font-size:22px;margin:12px 0 6px}
-  .card p{font-size:15px}
-
-  .list{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
-  .list li{list-style:none;border-top:1.5px solid var(--line);padding:16px 0 16px 28px;position:relative;font-size:16px}
-  .list li::before{content:"✦" / "";position:absolute;left:4px;top:17px;font-size:13px}
-  .list li b{font-weight:400;font-family:var(--serif);font-size:18px}
-  .badge{display:inline-block;border:1.5px solid var(--cherry);border-radius:999px;font-size:12px;letter-spacing:.1em;padding:1px 8px;vertical-align:middle}
-
-  /* Bloque honesto para marcas */
-  .founder{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
-  .founder > div{border:1.5px solid var(--cherry);border-radius:16px;padding:24px}
-  .founder h4{font-family:var(--serif);font-weight:400;font-size:24px;margin-bottom:10px}
-  .founder ul{list-style:none}
-  .founder li{padding:6px 0 6px 24px;position:relative}
-  .founder li::before{content:"✓" / "";position:absolute;left:0}
-  .founder p{font-size:15px}
-
-  /* FORMS */
-  .formbox{border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1.15fr;gap:40px;margin-top:64px}
-  .formbox.wine{background:var(--cherry);color:var(--cream)}
-  .formbox.green{background:var(--green);color:var(--cherry)}
-  .formbox h2{font-size:clamp(30px,3.6vw,40px);margin-bottom:18px}
-  .formbox .note{font-size:14px;margin-top:14px}
-  .rgpd{font-size:13px;line-height:1.5;margin-top:14px;padding-top:12px;border-top:1px solid currentColor}
-  form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  form label.f{display:block;font-size:14px;margin-bottom:14px}
-  form label.f span{display:block;margin-bottom:5px}
-  input[type=text],input[type=email],input[type=tel],select,textarea{
-    width:100%;min-height:46px;font:inherit;font-size:16px;color:var(--cherry);background:var(--cream-2);border:1.5px solid var(--cherry);border-radius:10px;padding:10px 12px}
-  .formbox.wine input,.formbox.wine select{border-color:var(--cream-2)}
-  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--cherry);outline-offset:2px}
-  .formbox.wine input:focus-visible,.formbox.wine select:focus-visible{outline-color:var(--green)}
-  textarea{min-height:100px;resize:vertical}
-  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2374070E' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
-  .consent{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;margin:8px 0 18px;cursor:pointer}
-  .consent input{flex:0 0 22px;width:22px;height:22px;margin-top:1px;accent-color:var(--cherry)}
-  .formbox.wine .consent input{accent-color:var(--green)}
-  fieldset{border:none;margin-bottom:14px}
-  legend{font-size:14px;margin-bottom:8px}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chips label{cursor:pointer;position:relative}
-  .chips input{position:absolute;opacity:0;width:1px;height:1px}
-  .chips span{display:inline-flex;align-items:center;min-height:44px;border:1.5px solid var(--cherry);border-radius:999px;padding:0 14px;font-size:14px;transition:background .2s,color .2s}
-  .chips input:checked + span{background:var(--cherry);color:var(--cream)}
-  .chips input:checked + span::before{content:"✓ " / ""}
-  .chips input:focus-visible + span{outline:3px solid var(--cherry);outline-offset:2px}
-  .btn{font-family:var(--serif);font-size:18px;min-height:48px;border:none;border-radius:999px;padding:12px 28px;cursor:pointer;transition:transform .15s,opacity .2s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn:disabled{opacity:.6;cursor:wait}
-  .btn.green{background:var(--green);color:var(--cherry)}
-  .btn.wine{background:var(--cherry);color:var(--cream)}
-  .status{font-size:15px;margin-top:12px;min-height:1.2em}
-  .hp{position:absolute;left:-9999px}
-
-  /* FOOTER */
-  footer{text-align:center;padding:60px 0 40px}
-  footer .logo{font-family:var(--display);font-size:clamp(64px,12vw,100px);line-height:1}
-  footer .social{display:flex;justify-content:center;gap:10px;margin:24px 0 18px;flex-wrap:wrap}
-  footer small{font-size:14px;display:block}
-  footer .legal{margin-top:6px;display:flex;justify-content:center;gap:4px;flex-wrap:wrap}
-  footer .legal a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;font-size:14px}
-
-  @media (max-width:760px){
-    .intro,.formbox,.founder{grid-template-columns:1fr;gap:20px}
-    .cards{grid-template-columns:1fr}
-    .list{grid-template-columns:1fr}
-    .formbox{padding:28px 20px}
-    .choices{grid-template-columns:1fr}
-    .choice{min-height:0}
-    .nav .pill{font-size:13px;padding:0 12px}
-    form .row{grid-template-columns:1fr;gap:0}
-    section.block{padding:48px 0}
-    .hero .kicker{letter-spacing:.18em}
-    .choice .arrow{display:none}
-  }
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    *{transition:none!important}
-    .choice:hover,.btn:hover{transform:none}
-  }
-</style>
 </head>
-<body>
+<body data-page="clientas">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-dot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.3L3.2 20.8l4.4-1.2A8.8 8.8 0 1 0 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .5-.2 1.2-.7 1.5-.6.4-1.4.6-2.4.3a9.3 9.3 0 0 1-5.2-4.6c-.6-1.2-.5-2.4.4-3.2z" fill="currentColor"/></symbol>
+</svg>
+<a class="skip" href="#apuntate">Saltar al formulario</a>
 
-<div class="hero-band">
-  <div class="wrap">
-    <nav class="nav" aria-label="Principal">
-      <a class="logo" href="#top" aria-label="RESET, inicio">RESET</a>
-      <div class="pills">
-        <a class="pill" href="#clientas">Quiero ir</a>
-        <a class="pill" href="#marcas">Soy marca</a>
+<header>
+  <nav class="nav" aria-label="Principal">
+    <div class="wrap">
+      <a class="logo" href="./" aria-label="RESET, inicio" data-hide-on-hero>RESET</a>
+      <div class="links">
+        <a href="marcas.html">Para marcas</a>
+        <a class="btn btn-cherry" href="#apuntate">Apuntarme</a>
       </div>
-    </nav>
-
-    <header class="hero" id="top">
-      <h1><span class="word">RESET</span><span class="kicker">Talleres de skincare en Málaga</span></h1>
-      <p class="lead">Una tarde con tus amigas para descubrir tu tipo de piel, probar productos de una marca emergente y volver a casa con una rutina clara. Un plan, no una clase.</p>
-      <ul class="tags" aria-label="Cómo es RESET">
-        <li>10-15 chicas</li>
-        <li>18-25 años</li>
-        <li>1 marca por evento</li>
-        <li>Málaga</li>
-      </ul>
-      <div class="choices">
-        <a class="choice cream" href="#clientas"><strong>Quiero ir a un RESET</strong><small>Apúntate a la lista y te avisamos primero</small><span class="arrow" aria-hidden="true">↓</span></a>
-        <a class="choice wine" href="#marcas"><strong>Tengo una marca de skincare</strong><small>Buscamos la marca del primer RESET</small><span class="arrow" aria-hidden="true">↓</span></a>
-      </div>
-    </header>
-  </div>
-</div>
-
-<main class="wrap">
-
-  <!-- CLIENTAS -->
-  <section class="block" id="clientas" aria-labelledby="t-clientas">
-    <div class="intro">
-      <div>
-        <p class="eyebrow">Para ti</p>
-        <h2 id="t-clientas">Una tarde para <em>resetear</em> tu piel (y tu semana).</h2>
-      </div>
-      <p>Vienes con tus amigas, descubres qué tipo de piel tienes y qué le sienta bien, y te vas con una rutina clara. Pruebas antes de comprar, así no gastas en productos que no te sirven.</p>
     </div>
+  </nav>
 
-    <ol class="cards">
-      <li class="card wine"><div class="num" aria-hidden="true">01</div><h4>Conoce tu piel</h4><p>Alguien de la marca te explica los tipos de piel y te ayuda a saber cuál es la tuya.</p></li>
-      <li class="card green"><div class="num" aria-hidden="true">02</div><h4>Pruébalo en tu piel</h4><p>Te haces la mascarilla y pruebas los productos que van con tu tipo de piel, con ayuda y en directo.</p></li>
-      <li class="card cream"><div class="num" aria-hidden="true">03</div><h4>Plan de chicas</h4><p>Peli, picoteo y charla. Un plan distinto al de siempre, ya montado: solo tienes que venir.</p></li>
-    </ol>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="wordmark" aria-hidden="true" data-enter>RESET</p>
+          <h1 data-enter="2">Descubre tu tipo de piel en un taller de skincare con tus amigas.</h1>
+          <p class="lead" data-enter="2">En Málaga, para chicas de 18 a 25 años. Pruebas productos de una marca emergente y te vas a casa con tu rutina.</p>
+          <ul class="facts" data-enter="3" aria-label="Cómo es RESET">
+            <li><svg aria-hidden="true"><use href="#i-dot"/></svg>10-15 plazas</li>
+            <li><svg aria-hidden="true"><use href="#i-dot"/></svg>1 marca por taller</li>
+            <li><svg aria-hidden="true"><use href="#i-dot"/></svg>Comprar es opcional</li>
+          </ul>
 
-    <h3>Qué te llevas</h3>
-    <ul class="list">
-      <li>Sales sabiendo tu tipo de piel y qué usar.</li>
-      <li>Una rutina clara y hecha para ti.</li>
-      <li>Pruebas antes de comprar: no gastas en lo que no te sirve.</li>
-      <li>Descubres marcas nuevas antes que nadie.</li>
-      <li>Grupo pequeño y cercano. Comprar es opcional: nadie te va a presionar.</li>
-      <li>Una tarde con tus amigas que no es la de siempre.</li>
-    </ul>
+          <div class="capture" id="apuntate" data-steps data-enter="3">
+            <form class="step" id="c1" data-subject="Nueva clienta en la lista de espera de RESET" data-next="#c2" novalidate>
+              <div class="inline">
+                <label class="field"><span>Tu email</span><input type="email" name="email" placeholder="tu@email.com" autocomplete="email" inputmode="email" required></label>
+                <button class="btn btn-cherry" type="submit" style="align-self:flex-end">Apuntarme a la lista</button>
+              </div>
+              <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada, mayor de 18" required><span>Tengo 18 años o más, he leído la <a href="privacidad.html">política de privacidad</a> y acepto que me escribáis para avisarme de los talleres.</span></label>
+              <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <p class="micro">Quien está en la lista se entera antes que nadie de la fecha y el sitio. Te das de baja cuando quieras.</p>
+              <p class="status" role="status" aria-live="polite"></p>
+              <p class="rgpd">Responsable: Asociación Junior Empresa VYSEON. Finalidad: avisarte de los talleres. No compartimos tus datos con las marcas. Derechos y más información en la <a href="privacidad.html">política de privacidad</a>.</p>
+            </form>
 
-    <div class="formbox wine">
-      <div>
-        <p class="eyebrow">Lista de espera</p>
-        <h2>Entérate antes que nadie del primer RESET.</h2>
-        <p>Déjanos tu email y te escribimos con todos los detalles en cuanto estén cerrados. Son 10-15 plazas, así que quien está en la lista se entera primero.</p>
-        <p class="note">Solo te escribiremos para avisarte de los eventos. Puedes darte de baja cuando quieras.</p>
+            <form class="step" id="c2" hidden data-subject="Datos extra de una clienta de la lista" data-carry="1" data-next="#c3" novalidate>
+              <p class="done-title" data-focus><svg aria-hidden="true"><use href="#i-check"/></svg>¡Ya estás en la lista!</p>
+              <p style="margin-bottom:16px">Tres preguntas rápidas para preparar tu taller. Son opcionales.</p>
+              <fieldset>
+                <legend>Tu tipo de piel</legend>
+                <div class="chips">
+                  <label><input type="radio" name="tipo_de_piel" value="Seca"><span>Seca</span></label>
+                  <label><input type="radio" name="tipo_de_piel" value="Grasa"><span>Grasa</span></label>
+                  <label><input type="radio" name="tipo_de_piel" value="Mixta"><span>Mixta</span></label>
+                  <label><input type="radio" name="tipo_de_piel" value="Normal"><span>Normal</span></label>
+                  <label><input type="radio" name="tipo_de_piel" value="Sensible"><span>Sensible</span></label>
+                  <label><input type="radio" name="tipo_de_piel" value="No lo sé"><span>No lo sé</span></label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Tu edad</legend>
+                <div class="chips">
+                  <label><input type="radio" name="edad" value="18-20"><span>18-20</span></label>
+                  <label><input type="radio" name="edad" value="21-23"><span>21-23</span></label>
+                  <label><input type="radio" name="edad" value="24-25"><span>24-25</span></label>
+                  <label><input type="radio" name="edad" value="Más de 25"><span>Más de 25</span></label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>¿Vendrías con amigas?</legend>
+                <div class="chips">
+                  <label><input type="radio" name="con_amigas" value="Sí, con amigas"><span>Sí, con amigas</span></label>
+                  <label><input type="radio" name="con_amigas" value="Con una amiga"><span>Con una amiga</span></label>
+                  <label><input type="radio" name="con_amigas" value="Sola"><span>Sola</span></label>
+                </div>
+              </fieldset>
+              <div class="share" style="margin-top:4px">
+                <button class="btn btn-cherry" type="submit">Enviar respuestas</button>
+                <button class="link-quiet" type="button" data-skip="#c3">Ahora no</button>
+              </div>
+              <p class="status" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="step" id="c3" hidden>
+              <p class="done-title" data-focus><svg aria-hidden="true"><use href="#i-check"/></svg>Hecho. Te avisamos por email.</p>
+              <p>RESET es un plan para ir con tus amigas. Pásales la web para que también estén en la lista:</p>
+              <div class="share">
+                <a class="btn btn-cherry" href="https://wa.me/?text=Mira%20esto%3A%20talleres%20de%20skincare%20en%20M%C3%A1laga%20para%20ir%20juntas%20%E2%9C%A8%20https%3A%2F%2Fcarlotaoliveros-dev.github.io%2Freset%2F" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar por WhatsApp</a>
+                <button class="btn btn-ghost" type="button" data-copy="https://carlotaoliveros-dev.github.io/reset/">Copiar enlace</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone" data-enter="3">
+          <video data-loop autoplay muted loop playsinline preload="auto" poster="media/tipos-de-piel.jpg" aria-label="Vídeo de RESET: ¿qué tipo de piel tienes?">
+            <source src="media/tipos-de-piel.mp4" type="video/mp4">
+          </video>
+          <p class="tag">Así hablamos de skincare en <a href="https://www.tiktok.com/@the.resett" target="_blank" rel="noopener">TikTok</a></p>
+        </div>
       </div>
-      <form class="js-form" data-subject="Nueva clienta en la lista de espera de RESET" data-ok="¡Ya estás en la lista! Te escribiremos en cuanto tengamos todos los detalles ✦" novalidate>
-        <label class="f"><span>Email (obligatorio)</span><input type="email" name="email" placeholder="tu@email.com" autocomplete="email" required></label>
-        <div class="row">
-          <label class="f"><span>Nombre</span><input type="text" name="nombre" autocomplete="given-name"></label>
-          <label class="f"><span>Instagram</span><input type="text" name="instagram" placeholder="@" autocapitalize="off"></label>
-        </div>
-        <div class="row">
-          <label class="f"><span>Edad</span>
-            <select name="edad"><option value="">Elige</option><option>18-20</option><option>21-23</option><option>24-25</option><option>Más de 25</option></select>
-          </label>
-          <label class="f"><span>Tu tipo de piel</span>
-            <select name="tipo_de_piel"><option value="">Elige</option><option>Seca</option><option>Grasa</option><option>Mixta</option><option>Normal</option><option>Sensible</option><option>No lo sé</option></select>
-          </label>
-        </div>
-        <label class="f"><span>¿Vendrías con amigas?</span>
-          <select name="con_amigas"><option value="">Elige</option><option>Sí, con amigas</option><option>Sí, con una amiga</option><option>Iría sola</option><option>Aún no lo sé</option></select>
-        </label>
-        <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada y mayor de 18" required><span>Tengo 18 años o más, he leído la <a href="privacidad.html">política de privacidad</a> y acepto que me escribáis por email para avisarme de los eventos.</span></label>
-        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn green" type="submit">Apuntarme a la lista</button>
-        <p class="status" role="status" aria-live="polite"></p>
-        <p class="rgpd">Responsable: Asociación Junior Empresa VYSEON. Finalidad: avisarte de los eventos. No cedemos tus datos a las marcas. Puedes acceder a ellos, corregirlos o borrarlos escribiendo a resett.info@gmail.com. Más información en la <a href="privacidad.html">política de privacidad</a>.</p>
-      </form>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="s" aria-labelledby="t-tarde">
+    <div class="wrap">
+      <div class="s-head">
+        <h2 id="t-tarde">Así es una tarde <em>RESET</em>.</h2>
+        <p>Un plan con tus amigas, no una clase. Tres momentos y te vas sabiendo qué le sienta bien a tu piel.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="n" aria-hidden="true">1</span><h3>Conoce tu piel</h3><p>Alguien de la marca te explica los tipos de piel y te ayuda a saber cuál es la tuya.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h3>Pruébalo en tu piel</h3><p>Te haces la mascarilla y pruebas los productos que van con tu tipo de piel, con ayuda y en directo.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h3>Plan de chicas</h3><p>Peli, picoteo y charla. Un plan distinto al de siempre, ya montado: solo tienes que venir.</p></li>
+      </ol>
     </div>
   </section>
 
-  <!-- MARCAS -->
-  <section class="block" id="marcas" aria-labelledby="t-marcas">
-    <div class="intro">
-      <div>
-        <p class="eyebrow">Para marcas emergentes de skincare</p>
-        <h2 id="t-marcas">Tu próxima clienta no quiere otro anuncio. <em>Quiere probarlo.</em></h2>
+  <section class="s" aria-labelledby="t-llevas">
+    <div class="wrap">
+      <div class="s-head">
+        <h2 id="t-llevas">Lo que te llevas a casa.</h2>
+        <p>Pruebas antes de comprar. Así no gastas en productos que no te sirven.</p>
       </div>
-      <p>Reunimos a grupos de 10 a 15 chicas de 18 a 25 años en Málaga para que descubran su tipo de piel y prueben tus productos en vivo. En cada evento hay una sola marca: sin competencia en la mesa, sin ruido.</p>
-    </div>
-
-    <ol class="cards">
-      <li class="card wine"><div class="num" aria-hidden="true">01</div><h4>Tu marca habla</h4><p>Una persona de tu equipo presenta la filosofía, los productos y explica los tipos de piel.</p></li>
-      <li class="card green"><div class="num" aria-hidden="true">02</div><h4>Prueban en su piel</h4><p>Cada chica prueba mascarillas y productos según su tipo de piel, con ayuda y en directo.</p></li>
-      <li class="card cream"><div class="num" aria-hidden="true">03</div><h4>Venta en el evento</h4><p>Tienes un espacio para vender a quien quiera llevarse el producto después de probarlo.</p></li>
-    </ol>
-
-    <h3>Buscamos la marca del primer RESET</h3>
-    <div class="founder">
-      <div>
-        <h4>Nuestro compromiso</h4>
-        <ul>
-          <li>Tu marca es la única del evento.</li>
-          <li>Un grupo pequeño (10 a 15 plazas) de chicas de 18 a 25 años, tu público objetivo, en Málaga.</li>
-          <li>Fotos y vídeos del evento con tu producto en uso, para tus redes.</li>
-          <li>Después del evento, un resumen de lo que opinaron las asistentes (sin datos personales).</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Lo que aún no podemos enseñarte</h4>
-        <p>Somos un proyecto nuevo: todavía no tenemos cifras de eventos anteriores. Por eso empezamos con una llamada corta, te enviamos el dossier con todos los detalles y decides sin compromiso. La marca del primer RESET será la que aparezca en las primeras fotos y vídeos del proyecto.</p>
+      <div class="with-reel">
+      <ul class="benefits one">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Tu tipo de piel, claro</b>Sales sabiendo qué piel tienes y qué usar.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Una rutina hecha para ti</b>Paso a paso, sin productos de más.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Marcas nuevas antes que nadie</b>Una marca emergente por taller, en tus manos.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Sin presión para comprar</b>Grupo pequeño y cercano. Comprar es opcional.</span></li>
+      </ul>
+      <div class="reel"><video controls playsinline preload="none" poster="media/orden-rutina.jpg" aria-label="Vídeo de RESET: el orden de tu rutina de skincare"><source src="media/orden-rutina.mp4" type="video/mp4"></video></div>
       </div>
     </div>
+  </section>
 
-    <h3>Cómo colaborar</h3>
-    <ul class="list">
-      <li><b>Producto</b>: aportas el producto para las pruebas y, si quieres, algún detalle para las asistentes.</li>
-      <li><b>Presencia de marca</b>: una persona de tu equipo presenta la marca y asesora a las chicas.</li>
-      <li><b>Patrocinio del evento</b> <span class="badge">OPCIONAL</span>: si quieres que el evento sea tuyo de principio a fin, lo vemos juntas en la llamada.</li>
-    </ul>
-
-    <div class="formbox green">
-      <div>
-        <p class="eyebrow">Hablemos</p>
-        <h2>¿Tu marca encaja en RESET?</h2>
-        <p>Cuéntanos un poco sobre tu marca. Te enviamos el dossier y agendamos una llamada corta.</p>
-        <p class="note">Respondemos en 2 o 3 días laborables.</p>
+  <section class="s" aria-labelledby="t-faq">
+    <div class="wrap">
+      <div class="s-head">
+        <h2 id="t-faq">Antes de apuntarte.</h2>
+        <p>Lo que querrías saber, contado en corto. Si te queda alguna duda, escríbenos por <a href="https://www.instagram.com/the.resett_/" target="_blank" rel="noopener">Instagram</a>.</p>
       </div>
-      <form class="js-form" data-subject="Nueva marca interesada en colaborar con RESET" data-ok="¡Gracias! Te escribimos en 2 o 3 días laborables con el dossier ✦" novalidate>
-        <div class="row">
-          <label class="f"><span>Marca (obligatorio)</span><input type="text" name="marca" autocomplete="organization" required></label>
-          <label class="f"><span>Persona de contacto (obligatorio)</span><input type="text" name="persona_de_contacto" autocomplete="name" required></label>
-        </div>
-        <div class="row">
-          <label class="f"><span>Email (obligatorio)</span><input type="email" name="email" autocomplete="email" required></label>
-          <label class="f"><span>Teléfono</span><input type="tel" name="telefono" autocomplete="tel"></label>
-        </div>
-        <label class="f"><span>Web o Instagram de la marca</span><input type="text" name="web_o_instagram" placeholder="@ o https://" autocapitalize="off"></label>
-        <fieldset>
-          <legend>¿Cómo te gustaría colaborar? Puedes marcar varias.</legend>
-          <div class="chips">
-            <label><input type="checkbox" name="colaboracion" value="Producto"><span>Producto</span></label>
-            <label><input type="checkbox" name="colaboracion" value="Presencia de marca"><span>Presencia de marca</span></label>
-            <label><input type="checkbox" name="colaboracion" value="Patrocinio del evento"><span>Patrocinio del evento</span></label>
-            <label><input type="checkbox" name="colaboracion" value="Aún no lo sé"><span>Aún no lo sé</span></label>
-          </div>
-        </fieldset>
-        <label class="f"><span>Cuéntanos algo más</span><textarea name="mensaje" placeholder="Qué productos tenéis, desde dónde trabajáis, dudas..."></textarea></label>
-        <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada" required><span>He leído la <a href="privacidad.html">política de privacidad</a> y acepto que me contactéis sobre esta colaboración.</span></label>
-        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn wine" type="submit">Quiero colaborar</button>
-        <p class="status" role="status" aria-live="polite"></p>
-        <p class="rgpd">Responsable: Asociación Junior Empresa VYSEON. Finalidad: responder a tu solicitud y gestionar la colaboración. Puedes acceder a tus datos, corregirlos o borrarlos escribiendo a resett.info@gmail.com. Más información en la <a href="privacidad.html">política de privacidad</a>.</p>
-      </form>
+      <div class="faq">
+        <details><summary>¿Cuándo y dónde es?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>En Málaga. La fecha, el sitio y la marca se anuncian primero a quien está en la lista, por email.</p></details>
+        <details><summary>¿Tengo que comprar algo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No. Puedes llevarte algún producto si te gusta, pero comprar es opcional y nadie te va a presionar.</p></details>
+        <details><summary>No sé qué tipo de piel tengo. ¿Puedo ir?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Claro, para eso es la primera parte de la tarde: descubrir cuál es la tuya.</p></details>
+        <details><summary>¿Cuántas somos?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Entre 10 y 15 chicas por taller, para que dé tiempo a probar y preguntar.</p></details>
+        <details><summary>¿Qué hacéis con mi email?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Solo lo usamos para avisarte de los talleres. No lo compartimos con las marcas y te puedes dar de baja cuando quieras. Más detalle en la <a href="privacidad.html">política de privacidad</a>.</p></details>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="wrap">
-  <div class="logo" aria-hidden="true">RESET</div>
-  <div class="social">
-    <a class="pill" href="https://www.instagram.com/the.resett_/" target="_blank" rel="noopener">Instagram @the.resett_</a>
-    <a class="pill" href="https://www.tiktok.com/@the.resett" target="_blank" rel="noopener">TikTok @the.resett</a>
+<section class="close" aria-labelledby="t-close">
+  <div class="wrap grid">
+    <div>
+      <h2 id="t-close">Son 10-15 plazas por taller. Entra en la lista.</h2>
+      <p>Te escribimos antes que a nadie con todos los detalles.</p>
+    </div>
+    <div class="capture" data-steps>
+      <form class="step" id="d1" data-subject="Nueva clienta en la lista de espera de RESET" data-next="#d2" novalidate>
+        <div class="inline">
+          <label class="field"><span>Tu email</span><input type="email" name="email" placeholder="tu@email.com" autocomplete="email" inputmode="email" required></label>
+          <button class="btn btn-green" type="submit" style="align-self:flex-end">Apuntarme a la lista</button>
+        </div>
+        <label class="consent"><input type="checkbox" name="privacidad" value="Aceptada, mayor de 18" required><span>Tengo 18 años o más, he leído la <a href="privacidad.html">política de privacidad</a> y acepto que me escribáis para avisarme de los talleres.</span></label>
+        <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="step" id="d2" hidden>
+        <p class="done-title" data-focus><svg aria-hidden="true"><use href="#i-check"/></svg>¡Ya estás en la lista!</p>
+        <p>Pásales la web a tus amigas para ir juntas:</p>
+        <div class="share">
+          <a class="btn btn-green" href="https://wa.me/?text=Mira%20esto%3A%20talleres%20de%20skincare%20en%20M%C3%A1laga%20para%20ir%20juntas%20%E2%9C%A8%20https%3A%2F%2Fcarlotaoliveros-dev.github.io%2Freset%2F" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <small>RESET es un proyecto de la Asociación Junior Empresa VYSEON · Málaga</small>
-  <nav class="legal" aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></nav>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="cross" href="marcas.html">¿Tienes una marca de skincare? Colabora con RESET <svg width="20" height="20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <p class="wordmark" aria-hidden="true">RESET</p>
+    <div class="social">
+      <a class="btn btn-ghost" href="https://www.instagram.com/the.resett_/" target="_blank" rel="noopener">Instagram @the.resett_</a>
+      <a class="btn btn-ghost" href="https://www.tiktok.com/@the.resett" target="_blank" rel="noopener">TikTok @the.resett</a>
+    </div>
+    <small>RESET es un proyecto de la Asociación Junior Empresa VYSEON · Málaga</small>
+    <nav class="legal" aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a></nav>
+  </div>
 </footer>
 
-<script>
-  // Envío de formularios a resett.info@gmail.com mediante Web3Forms (sin servidor propio)
-  // Cuando tengamos la clave de Web3Forms (gratis, web3forms.com), se pone aquí y se usa en lugar de FormSubmit.
-  const WEB3FORMS_KEY = '1c515b36-ff91-4d74-bf1a-f64a699a5f9b';
-  const CONTACT = 'resett.info@gmail.com';
-  const ENDPOINT = WEB3FORMS_KEY ? 'https://api.web3forms.com/submit' : 'https://formsubmit.co/ajax/' + CONTACT;
-
-  // Si el servicio falla, ofrecemos enviar los mismos datos por email para no perder a nadie.
-  function mailtoFallback(data) {
-    const body = Object.entries(data).filter(([k]) => !k.startsWith('_') && k !== 'access_key' && k !== 'subject')
-      .map(([k, v]) => k.replace(/_/g, ' ') + ': ' + v).join('\n');
-    return 'mailto:' + CONTACT + '?subject=' + encodeURIComponent(data._subject || 'RESET') + '&body=' + encodeURIComponent(body);
-  }
-
-  const MSG = {
-    email: 'Escribe un email válido, por ejemplo tu@email.com.',
-    required: 'Rellena este campo para poder enviarlo.',
-    privacidad: 'Marca la casilla de privacidad para poder enviarlo.'
-  };
-
-  function validate(form) {
-    for (const el of form.querySelectorAll('[required]')) {
-      el.removeAttribute('aria-invalid');
-      if (!el.checkValidity()) {
-        el.setAttribute('aria-invalid', 'true');
-        el.focus();
-        return el.type === 'checkbox' ? MSG.privacidad : (el.type === 'email' && el.value ? MSG.email : MSG.required);
-      }
-    }
-    return '';
-  }
-
-  document.querySelectorAll('.js-form').forEach(form => {
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-      const status = form.querySelector('.status');
-      const btn = form.querySelector('button[type=submit]');
-      const error = validate(form);
-      if (error) { status.textContent = error; return; }
-
-      const fd = new FormData(form);
-      if (fd.get('_honey')) return; // bot
-
-      const data = {};
-      for (const [k, v] of fd.entries()) {
-        if (k === '_honey') continue;
-        data[k] = data[k] ? data[k] + ', ' + v : v;
-      }
-      data._subject = form.dataset.subject;
-      if (WEB3FORMS_KEY) {
-        data.access_key = WEB3FORMS_KEY;
-        data.subject = form.dataset.subject;
-        data.from_name = 'Web RESET';
-      } else {
-        data._template = 'table';
-        if (data.email) data._replyto = data.email;
-      }
-
-      btn.disabled = true;
-      status.textContent = 'Enviando…';
-      try {
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 15000);
-        const res = await fetch(ENDPOINT, {
-          method: 'POST',
-          signal: ctrl.signal,
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        clearTimeout(timer);
-        const out = await res.json().catch(() => ({}));
-        if (!res.ok || out.success === 'false' || out.success === false) throw new Error(out.message || 'Error');
-        form.reset();
-        status.textContent = form.dataset.ok;
-      } catch (err) {
-        status.textContent = 'No se ha podido enviar desde la web. ';
-        const a = document.createElement('a');
-        a.href = mailtoFallback(data);
-        a.textContent = 'Envíanoslo por email con un clic';
-        status.append(a, ' (se abre tu correo con los datos ya escritos).');
-      } finally {
-        btn.disabled = false;
-      }
-    });
-  });
-</script>
+<script src="site.js" defer></script>
 </body>
 </html>
